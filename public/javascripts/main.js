@@ -33,18 +33,10 @@ function play_media(sounds_arr,images_arr,bg_sound){
             get_sound_images(sounds[soundIndex].s_id);            
             playSoundIfPresent(sounds[soundIndex].sound);
             currentTimer = setTimeout(changeSound, sounds[soundIndex].duration);
-//            $('.display').crossSlide({
-//                fade: 1,
-//                loop: 1
-//            }, new_images);
-
             $('.display').crossSlide({
                 fade: 1,
-                variant: true,
-                loop: 1,
-                easing: 'easeInOutQuad'
-            },new_images);
-
+                loop: 1
+            }, new_images);
         } else {
             // Organic ending
             backgroundSound.stop();
