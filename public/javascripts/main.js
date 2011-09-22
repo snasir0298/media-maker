@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    soundManager.url = 'swf/'; // directory where SM2 .SWFs live
+    soundManager.url = 'swf/'; // directory where SM2 .SWFs live   
 });
 
 var sounds = [];
@@ -12,7 +12,7 @@ function play_media(sounds_arr,images_arr,bg_sound){
     soundManager.useFlashBlock = false;
     var soundIndex;
     var currentTimer;
-    
+
     set_bg_sound(bg_sound); // Set BackGround Music to play
     set_sounds(sounds_arr); // Setting the sounds to play
     set_images(images_arr); // Setting the images to display
@@ -30,7 +30,7 @@ function play_media(sounds_arr,images_arr,bg_sound){
         }
         soundIndex += 1;
         if (soundIndex < sounds.length && $('.action').attr('value') == 'Stop') {
-            get_sound_images(sounds[soundIndex].s_id);            
+            get_sound_images(sounds[soundIndex].s_id);
             playSoundIfPresent(sounds[soundIndex].sound);
             currentTimer = setTimeout(changeSound, sounds[soundIndex].duration);
             $('.display').crossSlide({
