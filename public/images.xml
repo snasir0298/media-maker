@@ -55,7 +55,7 @@
 		<from>100% 80% 1.5x</from>
 		<to>80% 0% 1.1x</to>
 		<dir>down</dir>
-		<time>8</time>
+		<time>6</time>
 		<sound_id>1</sound_id>
 	</image>
 
