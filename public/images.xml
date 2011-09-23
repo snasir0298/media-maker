@@ -35,7 +35,7 @@
 		<from>100% 80% 1x</from>
 		<to>100% 0% 1.7x</to>
 		<dir>down</dir>
-		<time>4</time>
+		<time>3</time>
 		<sound_id>0</sound_id>
 	</image>
 
@@ -55,7 +55,7 @@
 		<from>100% 80% 1.5x</from>
 		<to>80% 0% 1.1x</to>
 		<dir>down</dir>
-		<time>6</time>
+		<time>7</time>
 		<sound_id>1</sound_id>
 	</image>
 
@@ -75,7 +75,7 @@
 		<from>100% 80% 1.2x</from>
 		<to>100% 20% 1.5x</to>
 		<dir>down</dir>
-		<time>5</time>
+		<time>6</time>
 		<sound_id>1</sound_id>
 	</image>
 
