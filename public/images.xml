@@ -45,7 +45,7 @@
 		<from>top left 1.3x</from>
 		<to>bottom right 1.5x</to>
 		<dir>up</dir>
-		<time>3</time>
+		<time>5</time>
 		<sound_id>0</sound_id>
 	</image>
 
@@ -92,8 +92,8 @@
 	<image>
 		<src>images/Titanic_Movie_Leo_Kate_Kiss.jpg</src>
 		<alt>Kiss</alt>
-		<from>100% 70% 1.5x</from>
-		<to>80% 20% 1.2x</to>
+		<from>60% 70% 1.5x</from>
+		<to>40% 20% 1.2x</to>
 		<dir>down</dir>
 		<time>10</time>
 		<sound_id>3</sound_id>
