@@ -28,17 +28,20 @@ class HomeController < ApplicationController
 
   def fetch_images
     @images = []
+    @imgs = []
 
     doc = Nokogiri::XML(open("#{RAILS_ROOT}/public/images.xml"))
-    sounds = doc.xpath('//images/image').map do |i|
-      {'src' => i.xpath('src'), 'alt' => i.xpath('alt'), 'from' => i.xpath('from'), 'to' => i.xpath('to'), 'time' => i.xpath('time'), 'sound' => i.xpath('sound_id')}
+    images = doc.xpath('//images/image').map do |i|
+      {'src' => i.xpath('src'), 'alt' => i.xpath('alt'), 'from' => i.xpath('from'), 'to' => i.xpath('to'), 'time' => i.xpath('time'), 'dir' => i.xpath('dir'), 'sound' => i.xpath('sound_id')}
     end
 
     count = 0
-    sounds.each do|s|
-      @images[count] = {"src" => s["src"].inner_text, "alt" => s["alt"].inner_text, "from" => s["from"].inner_text, "to" => s["to"].inner_text, "time" => s["time"].inner_text, "sound" => s["sound"].inner_text}.to_json
+    images.each do|s|
+      @imgs[count] = {"src" => s["src"].inner_text, "alt" => s["alt"].inner_text, "from" => s["from"].inner_text, "to" => s["to"].inner_text, "time" => s["time"].inner_text, "sound" => s["sound"].inner_text}
+      @images[count] = {"src" => s["src"].inner_text, "alt" => s["alt"].inner_text, "from" => s["from"].inner_text, "to" => s["to"].inner_text, "time" => s["time"].inner_text,"dir" => s["dir"].inner_text, "sound" => s["sound"].inner_text}.to_json
       count += 1
     end
+    return @images
 
 #    @images[0]  = {"src" => 'images/Astrology-Logo.jpg',"alt" => 'Astrology.com',"from" => '100% 100% 1x',"to" => '100% 100% 1x',"time" => '.1' }.to_json
 #    @images[1]  = {"src" => 'images/Whitish-Rectangle.jpg', "alt" => 'Personal Profile', "from" => '100% 100% 1x',"to" => '100% 100% 1x',"time" => '.1'}.to_json

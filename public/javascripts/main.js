@@ -35,7 +35,8 @@ function play_media(sounds_arr,images_arr,bg_sound){
             currentTimer = setTimeout(changeSound, sounds[soundIndex].duration);
             $('.display').crossSlide({
                 fade: 1,
-                loop: 1
+                variant: true,
+                easing: 'easeInOutQuad'
             }, new_images);
         } else {
             // Organic ending
@@ -108,7 +109,8 @@ function set_images(images_arr){
             from: data.from,
             to: data.to,
             time: data.time,
-            sound: data.sound
+            sound: data.sound,
+            dir: data.dir
         };
     });
 }
