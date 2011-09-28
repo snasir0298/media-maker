@@ -6,6 +6,7 @@ gem 'rake', '0.8.7'
 gem 'nokogiri'
 gem 'mysql'
 gem "hpricot"
+gem "heroku"
 #gem 'hpricot_scan'
 # Use unicorn as the web server
 # gem 'unicorn'
